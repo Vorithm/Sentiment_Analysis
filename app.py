@@ -6,7 +6,10 @@ import base64
 # --- NLTK imports ---
 import nltk
 from nltk.sentiment import SentimentIntensityAnalyzer
-nltk.download('vader_lexicon')
+try:
+    nltk.download('vader_lexicon', quiet=True)
+except Exception as e:
+    st.error(f"Error downloading NLTK data: {e}")
 sia = SentimentIntensityAnalyzer()
 
 # Set page configuration
@@ -313,4 +316,5 @@ def main():
         unsafe_allow_html=True
     )
 if __name__ == "__main__":
+
     main()
