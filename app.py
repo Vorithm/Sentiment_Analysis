@@ -45,7 +45,7 @@ def header_image(image_file):
     """, unsafe_allow_html=True)
 
 header_image(
-    "assets/background.jpg")
+    "background.jpg")
 
 
 # Custom CSS
@@ -318,3 +318,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
